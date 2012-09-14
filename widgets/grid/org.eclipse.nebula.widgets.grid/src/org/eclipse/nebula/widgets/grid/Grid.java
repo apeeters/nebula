@@ -4890,6 +4890,10 @@ public class Grid extends Canvas
             return false;
         }
 
+        if (cellSelectionEnabled && overThis.getSort() == SWT.NONE) {
+          return false;
+        }
+
         columnBeingPushed = overThis;
 
         // draw pushed
